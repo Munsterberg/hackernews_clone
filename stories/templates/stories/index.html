@@ -1,0 +1,9 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<ol>
+  {% for story in stories %}
+    <li>{{ story.title }}</li>
+  {% endfor %}
+</ol>
+{% endblock %}
