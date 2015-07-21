@@ -1,9 +1,15 @@
 {% extends 'layout.html' %}
+{% load story_extras %}
 
 {% block content %}
 <ol>
   {% for story in stories %}
-    <li>{{ story.title }}</li>
+    <li>
+      <p class="story-title"><a href="{{ story.url }}">{{ story.title }}</a><span class="story-domain">
+        {{ story.domain }}
+      </span></p>
+      <p class="story-info">{{ story.points }} points by {{ story.moderator }} {{ story.created_at|age }}</p>
+    </li>
   {% endfor %}
 </ol>
 {% endblock %}
