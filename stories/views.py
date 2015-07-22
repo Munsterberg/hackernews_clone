@@ -1,6 +1,7 @@
 import datetime
 from django.shortcuts import render, render_to_response, redirect
 from django.utils.timezone import utc
+from django.contrib.auth.decorators import login_required
 
 from .models import Story
 from .forms import StoryForm
@@ -21,14 +22,18 @@ def index(request):
   stories = top_stories(top=30)
   context = {
     'stories': stories,
+    'user': request.user,
   }
   return render(request, 'stories/index.html', context)
 
+@login_required
 def story(request):
   if request.method == 'POST':
     form = StoryForm(request.POST)
     if form.is_valid():
-      form.save()
+      story = form.save(commit=False)
+      story.moderator = request.user
+      story.save()
       return redirect('/')
   else:
     form = StoryForm()

@@ -12,6 +12,15 @@
   <div class="container">
     <div id="header">
       <h1>Not Hacker News</h1>
+      <ul>
+        <li>
+          {% if user.is_authenticated %}
+            {{ user.username }} | <a href="/story/">submit</a> | <a href="/logout/">logout</a>
+            {% else %}
+              <a href="/login/">login</a>
+          {% endif %}
+        </li>
+      </ul>
     </div>
     {% block content %}
     {% endblock %}
