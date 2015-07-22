@@ -2,9 +2,12 @@
   background-color: #e74c3c;
 }
 
-#header > h1 {
+#header > ul > li > h1 {
   font-size: 20px;
   color: #ffffff;
-  padding: 5px 0px 5px 0px;
-  margin-left: 3px;
+}
+
+#header > ul > li {
+  list-style: none;
+  display: inline-block;
 }
