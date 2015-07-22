@@ -7,8 +7,12 @@
   {% for story in stories %}
     <li>
       <p class="story-title">
-        <a href="/vote/" id="story-vote-{{ story.id }}" class="vote"><i class="glyphicon glyphicon-arrow-up"></i></a>
-        <a href="{{ story.url }}" id="story-title-{{ story.id }}">{{ story.title }}</a>
+        {% if user.is_authenticated and story not in liked_stories %}
+          <a href="/vote/" id="story-vote-{{ story.id }}" class="vote"><i class="glyphicon glyphicon-arrow-up"></i></a>
+          <a href="{{ story.url }}" id="story-title-{{ story.id }}">{{ story.title }}</a>
+        {% else %}
+          <a href="{{ story.url }}" style="margin-left: 15px;">{{ story.title }}</a>
+        {% endif %}
         <span class="story-domain">
         ({{ story.domain }})
         </span>
