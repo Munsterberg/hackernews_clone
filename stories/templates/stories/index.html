@@ -6,7 +6,7 @@
   {% for story in stories %}
     <li>
       <p class="story-title"><a href="{{ story.url }}">{{ story.title }}</a><span class="story-domain">
-        {{ story.domain }}
+        ({{ story.domain }})
       </span></p>
       <p class="story-info">{{ story.points }} points by {{ story.moderator }} {{ story.created_at|age }}</p>
     </li>

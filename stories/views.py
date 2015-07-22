@@ -1,8 +1,9 @@
 import datetime
-from django.shortcuts import render, render_to_response
+from django.shortcuts import render, render_to_response, redirect
 from django.utils.timezone import utc
 
 from .models import Story
+from .forms import StoryForm
 
 def score(story, gravity=1.8, timebase=120):
   points = (story.points - 1)**0.8
@@ -22,3 +23,15 @@ def index(request):
     'stories': stories,
   }
   return render(request, 'stories/index.html', context)
+
+def story(request):
+  if request.method == 'POST':
+    form = StoryForm(request.POST)
+    if form.is_valid():
+      form.save()
+      return redirect('/')
+  else:
+    form = StoryForm()
+  return render(request, 'stories/story.html', {
+    'form': form
+  })
