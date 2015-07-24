@@ -61,7 +61,9 @@ def register_page(request):
   if request.method == 'POST':
     form = UserForm(request.POST)
     if form.is_valid():
-      form.save(commit=True)
+      user = form.save(commit=False)
+      user.set_password(user.password)
+      user.save()
       return redirect('/')
   else:
     form = UserForm()    
