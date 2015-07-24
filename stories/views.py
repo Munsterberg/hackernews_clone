@@ -5,7 +5,7 @@ from django.contrib.auth.decorators import login_required
 from django.http import HttpResponse
 
 from .models import Story
-from .forms import StoryForm
+from .forms import StoryForm, UserForm
 
 def score(story, gravity=1.8, timebase=120):
   points = (story.points - 1)**0.8
@@ -56,3 +56,15 @@ def vote(request):
   user.liked_stories.add(story)
   user.save()
   return HttpResponse()
+
+def register_page(request):
+  if request.method == 'POST':
+    form = UserForm(request.POST)
+    if form.is_valid():
+      form.save(commit=True)
+      return redirect('/')
+  else:
+    form = UserForm()    
+  return render(request, 'stories/login_page.html', {
+    'form': form
+  })
