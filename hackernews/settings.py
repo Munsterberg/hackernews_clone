@@ -78,18 +78,18 @@ WSGI_APPLICATION = 'hackernews.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.8/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         # 'ENGINE': 'django.db.backends.sqlite3',
-#         # 'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-#         'NAME': 'hackernews',
-#         'USER': 'munsterberg',
-#         'PASSWORD': '',
-#         'HOST': 'localhost',
-#         'PORT': '',
-#     }
-# }
+DATABASES = {
+    'default': {
+        # 'ENGINE': 'django.db.backends.sqlite3',
+        # 'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'd7oa7237faoobc',
+        'USER': 'tsoivsmjerfzck',
+        'PASSWORD': 'cBL9VxTIgvGO7QHS0Q8iRFaF6L',
+        'HOST': 'ec2-54-83-55-214.compute-1.amazonaws.com',
+        'PORT': '5432',
+    }
+}
 
 import dj_database_url
 DATABASES['default'] =  dj_database_url.config(default='postgres://tsoivsmjerfzck:cBL9VxTIgvGO7QHS0Q8iRFaF6L@ec2-54-83-55-214.compute-1.amazonaws.com:5432/d7oa7237faoobc')
