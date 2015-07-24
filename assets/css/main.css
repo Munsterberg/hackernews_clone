@@ -31,6 +31,8 @@ body {
 
 #header > ul > li > a:hover {
   text-decoration: none; }
+#header > ul > li > a:focus {
+  text-decoration: none; }
 
 #header > ul > li {
   list-style: none;

@@ -18,9 +18,16 @@ body {
   color: #ffffff;
 }
 
-#header > ul > li > a:hover {
-  text-decoration: none;
+#header > ul > li > a {
+
+  &:hover {
+     text-decoration: none;   
+  }
+  &:focus {
+    text-decoration: none;
+  }
 }
+
 
 #header > ul > li {
   list-style: none;
