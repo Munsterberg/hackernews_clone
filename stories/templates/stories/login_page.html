@@ -2,9 +2,13 @@
 {% load static from staticfiles %}
 
 {% block content %}
+{% if user.is_authenticated %}
+  <h1>You are already logged in!</h1>
+{% else %}
   <form action="/register/" method="post">
     {% csrf_token %}
     {{ form.as_p }}
     <input type="submit" value="Submit">
   </form>
+{% endif %}
 {% endblock content %}
