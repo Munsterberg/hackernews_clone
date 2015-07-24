@@ -1,0 +1,30 @@
+body {
+  background-color: #ecf0f1; }
+
+.glyphicon-arrow-up {
+  color: #2ecc71; }
+
+#header {
+  background-color: #d32f2f;
+  margin-top: 20px;
+  border-radius: 5px; }
+
+#header > ul > li > a > h1 {
+  font-size: 20px;
+  color: #ffffff; }
+
+#header > ul > li > a:hover {
+  text-decoration: none; }
+
+#header > ul > li {
+  list-style: none;
+  display: inline-block; }
+
+.main-button {
+  background-color: #d32f2f;
+  border-radius: 3px;
+  border: none;
+  padding: 10px 20px 10px 20px;
+  color: #ffffff; }
+
+/*# sourceMappingURL=main.css.map */

@@ -64,7 +64,7 @@ def register_page(request):
       user = form.save(commit=False)
       user.set_password(user.password)
       user.save()
-      return redirect('/')
+      return redirect('/login/')
   else:
     form = UserForm()    
   return render(request, 'stories/login_page.html', {
