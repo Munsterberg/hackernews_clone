@@ -1,13 +1,29 @@
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Roboto Condensed", sans-serif; }
+
+p {
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 17px; }
+
+a {
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 17px; }
+
+li {
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 17px; }
+
 body {
-  background-color: #ecf0f1; }
+  background-color: #f9f0ea; }
 
 .glyphicon-arrow-up {
   color: #2ecc71; }
 
 #header {
-  background-color: #d32f2f;
+  background-color: #aa5f52;
   margin-top: 20px;
-  border-radius: 5px; }
+  border-radius: 5px;
+  box-shadow: 3px 3px 10px #888888; }
 
 #header > ul > li > a > h1 {
   font-size: 20px;
@@ -21,7 +37,7 @@ body {
   display: inline-block; }
 
 .main-button {
-  background-color: #d32f2f;
+  background-color: #aa5f52;
   border-radius: 3px;
   border: none;
   padding: 10px 20px 10px 20px;
