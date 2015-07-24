@@ -20,7 +20,7 @@ body {
   color: #2ecc71; }
 
 #header {
-  background-color: #aa5f52;
+  background-color: #2AB636;
   margin-top: 20px;
   border-radius: 5px;
   box-shadow: 3px 3px 10px #888888; }
@@ -37,10 +37,14 @@ body {
   display: inline-block; }
 
 .main-button {
-  background-color: #aa5f52;
+  background-color: #2AB636;
   border-radius: 3px;
   border: none;
   padding: 10px 20px 10px 20px;
   color: #ffffff; }
+
+.story-info {
+  color: #868686;
+  font-size: 14px; }
 
 /*# sourceMappingURL=main.css.map */
